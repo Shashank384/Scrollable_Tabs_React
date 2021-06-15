@@ -1,0 +1,89 @@
+.carousel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-wrapper {
+    display: flex;
+    width: 75%;
+    position: relative;
+}
+
+.carousel-content-wrapper {
+    overflow: hidden;
+    width: 75%;
+    height: 75%;
+}
+
+.carousel-content {
+    display: flex;
+    transition: all 250ms linear;
+}
+
+.carousel-content > * {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.carousel-content.size-3 > * {
+    width: calc(100% / 3);
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    border-radius: 12px;
+    background-color:blueviolet;
+    border: 1px solid #ddd;
+}
+
+.left-arrow {
+    left: -50px;
+}
+
+.right-arrow {
+    right: 120px;
+}
+
+.add-button {
+    position: absolute;
+    top: 25%;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    border-radius: 24px;
+    background-color:blueviolet;
+    right: 40px;
+}
+
+.outer {
+    background: rgb(218, 219, 218);
+    height: 60px;
+    margin: 5px;
+    display: block;
+    text-align: center;
+}
+.active{
+    background-color: rgb(158, 247, 118);
+    color: white;
+  }
+
+.button {
+    margin-left: 93%;
+    margin-top: -60px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+.outer:hover .button {
+    display: block
+}
